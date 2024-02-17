@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Change Button</title>
+    <style>
+        #colorButton {
+            background-color: red;
+            color: white;
+            font-size: 2em;
+            padding: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #message {
+            text-align: center;
+            font-size: 3em; /* Adjust the text size to fit in one row */
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <button id="colorButton" onclick="displayMessage()">Click me</button>
+    <p id="message">I love you!</p>
+
+    <script>
+        function displayMessage() {
+            var message = document.getElementById("message");
+            var button = document.getElementById("colorButton");
+            message.style.display = "block";
+            button.style.display = "none"; /* Hide the button */
+            document.body.style.backgroundColor = "pink"; /* Change the background color to pink */
+            document.body.style.transition = "background-color 2s";
+        }
+    </script>
+</body>
+</html>
